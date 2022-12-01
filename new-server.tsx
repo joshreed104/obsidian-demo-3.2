@@ -7,6 +7,7 @@ import resolvers from './server/resolvers.ts';
 import types from './server/schema.ts';
 import App from './client/app.tsx';
 import { staticFileMiddleware } from './staticFileMiddleware.ts';
+import { emit } from 'https://deno.land/x/emit/mod.ts';
 
 const PORT = 3000;
 const app = new Application();
@@ -66,7 +67,7 @@ router.get('/', (ctx: any) => {
 // Bundle hydrated app
 // const [_, clientJS] = await Deno.bundle('./client/client.tsx');
 
-const { files, diagnostics } = await Deno.emit('./client/client.tsx', {
+const { files, diagnostics } = await emit('./client/client.tsx', {
   bundle: 'module',
 });
 

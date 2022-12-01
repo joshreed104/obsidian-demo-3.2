@@ -1,7 +1,8 @@
-import React from 'https://dev.jspm.io/react';
-import ReactDOMServer from 'https://dev.jspm.io/react-dom/server';
-import ReactDom from 'https://dev.jspm.io/react-dom';
-import Chart from 'https://dev.jspm.io/chart.js';
+import React from 'https://jspm.dev/react';
+import ReactDOMServer from 'https://jspm.dev/react-dom/server';
+import ReactDom from 'https://jspm.dev/react-dom';
+import Chart from 'https://jspm.dev/chart';
+import { config as dotEnvConfig } from 'https://deno.land/x/dotenv@v1.0.1/mod.ts';
 
 import {
   ObsidianWrapper,
@@ -10,7 +11,7 @@ import {
 } from 'https://deno.land/x/obsidian/clientMod.ts';
 // } from '../obsidian/clientMod.ts';
 
-import rsh from 'https://dev.jspm.io/react-syntax-highlighter';
+import rsh from 'https://jspm.dev/react-syntax-highlighter';
 
 const realRSH: any = rsh;
 
@@ -25,4 +26,5 @@ export {
   ReactDom,
   CodeBlock,
   Chart,
+  dotEnvConfig,
 };
